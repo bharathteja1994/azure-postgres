@@ -1,0 +1,68 @@
+{
+  "psql_configurations": [
+    {
+      "name": "azure.extensions",
+      "value": "PG_CRON,PGAUDIT"
+    },
+    {
+      "name": "shared_preload_libraries",
+      "value": "pg_stat_statements, pgaudit"
+    },
+    {
+      "name": "log_duration",
+      "value": "OFF"
+    },
+    {
+      "name": "log_statement",
+      "value": "None"
+    },
+    {
+      "name": "pgaudit.log",
+      "value": "All"
+    },
+    {
+      "name": "log_line_prefix",
+      "value": "AUDIT=1|TIMESTAMP=%m|APPLICATION_NAME=%a|USER=%u|DATABASE=%d|REMOTE_HOST_AND_PORT=%r|SQL_STATE=%e|SESSION_ID=%c|SESSION_START=%s|PROCESS_ID=[%p]|VIRTUAL_TRANSACTION_ID=%v|TRANSACTION_ID=%x|"
+    },
+    {
+      "name": "log_statement_stats",
+      "value": "OFF"
+    },
+    {
+      "name": "password_encryption",
+      "value": "scram-sha-256"
+    },
+    {
+      "name": "log_error_verbosity",
+      "value": "verbose"
+    },
+    {
+      "name": "pgaudit.log_catalog",
+      "value": "ON"
+    },
+    {
+      "name": "pgaudit.log_client",
+      "value": "ON"
+    },
+    {
+      "name": "pgaudit.log_level",
+      "value": "LOG"
+    },
+    {
+      "name": "pgaudit.log_relation",
+      "value": "ON"
+    },
+    {
+      "name": "pgaudit.log_parameter",
+      "value": "ON"
+    },
+    {
+      "name": "pgaudit.log_statement_once",
+      "value": "ON"
+    },
+    {
+      "name": "cron.log_statement",
+      "value": "on"
+    }
+  ]
+}
